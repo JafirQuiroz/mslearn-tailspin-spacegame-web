@@ -4,7 +4,9 @@ node {
       checkout scm
   }
   stage('build') {
-   echo 'Building...'
+    steps {
+      echo 'building...'
+    }
   }
   stage('deploy') {
     echo 'deploy..'
