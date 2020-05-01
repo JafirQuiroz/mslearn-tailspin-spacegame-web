@@ -1,8 +1,8 @@
 node {
-  stage('init) {
+  stage('init') {
       checkout scm
   }
-  stage('build) {
+  stage('build') {
     sh '''
         npm intall --quiet
         node-sass Tailspin.SpaceGame.Web/wwwroot
