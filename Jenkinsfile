@@ -4,9 +4,11 @@ node {
       checkout scm
   }
   stage('build') {
-    steps {
-      echo 'building...'
-    }
+    echo 'building...'
+    sh '''
+     pwd
+     tar -czvf mslearn-tailspin-spacegame-web.tar.gz /tmp
+    '''
   }
   stage('deploy') {
     echo 'deploy..'
